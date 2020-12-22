@@ -1,20 +1,6 @@
 import java.lang.Math.pow
 
-fun main(args: Array<String>) {
-
-
-    var A: Array<DoubleArray> = Array(5) { DoubleArray(5) { 0.0 } }
-    A[0] = doubleArrayOf(2.0, 1.0, 0.0, 0.0, 0.0)
-    A[1] = doubleArrayOf(1.0, 2.0, 1.0, 0.0, 0.0)
-    A[2] = doubleArrayOf(0.0, 1.0, 2.0, 1.0, 0.0)
-    A[3] = doubleArrayOf(0.0, 0.0, 1.0, 2.0, 1.0)
-    A[4] = doubleArrayOf(0.0, 0.0, 0.0, 1.0, 2.0)
-
-    val h = 0.2
-
-    val f = arrayOf(2.0, 2.0, 2.0, 2.0, 2.0)
-    //Простите что не разбиваю на функции, но котлин не разрешает менять аргументы функций
-
+fun runMethod(A:Array<DoubleArray>, f :Array<Double>){
     val n = f.size
 
     var a = DoubleArray(n - 1) { 0.0 }
@@ -52,5 +38,21 @@ fun main(args: Array<String>) {
     for (i in 0 until n) {
         println(x[i])
     }
+}
+fun main(args: Array<String>) {
 
 
+    var A: Array<DoubleArray> = Array(5) { DoubleArray(5) { 0.0 } }
+    A[0] = doubleArrayOf(2.0, 1.0, 0.0, 0.0, 0.0)
+    A[1] = doubleArrayOf(1.0, 2.0, 1.0, 0.0, 0.0)
+    A[2] = doubleArrayOf(0.0, 1.0, 2.0, 1.0, 0.0)
+    A[3] = doubleArrayOf(0.0, 0.0, 1.0, 2.0, 1.0)
+    A[4] = doubleArrayOf(0.0, 0.0, 0.0, 1.0, 2.0)
+
+    val f = arrayOf(2.0, 2.0, 2.0, 2.0, 2.0)
+
+
+   runMethod(A,f)
+
+
+}
